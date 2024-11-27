@@ -4,7 +4,7 @@ import Home from "../pages/home";
 import GlobalStyles from "../styles/global.styles";
 import { ThemeProvider } from "styled-components";
 import theme from "../themes/theme";
-import MainPage from "../pages/Projects";
+// import MainPage from "../pages/Projects";
 import Footer from "../layout/Footer";
 import Error from "../pages/error";
 

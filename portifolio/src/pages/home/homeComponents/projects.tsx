@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./projects.style";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 type ClickedProps = {
     clientX: number;
@@ -27,6 +27,7 @@ const RecentProjects: React.FC<RecentProjectsProps> = ({
 }) => {
     const [mousePoints, setMousePoints] = React.useState<ClickedProps[]>([]);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const mod = (n: any, m: any) => {
         const result = n % m;
 

@@ -15,7 +15,7 @@ const Header = () => {
         setClicker(!clicked);
     }
 
-    window.addEventListener("scroll", (e) => {
+    window.addEventListener("scroll", () => {
         setClicker(false);
     });
 
