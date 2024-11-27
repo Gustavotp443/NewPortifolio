@@ -34,6 +34,10 @@ export const ProjectsContainer= styled.section`
     font-size: 1.5rem;
  }
 
+ @media screen and (max-width: 425px){
+  padding-bottom: 30vh;
+  }
+
 `;
 
 
@@ -106,6 +110,34 @@ export const CardWrapper= styled.div`
         transform: translateX(-12%) scale(0.3);
     }
 }
+`;
+
+export const DescriptionWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 570px) {
+        font-size: 0.75rem;
+    }
+`;
+
+export const DescriptionText = styled.p`
+    color: ${theme.backgroundColors.Gray};
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 70%; /* Ajuste para limitar a largura da descrição */
+    word-wrap: break-word;
+
+    @media screen and (max-width: 860px) {
+        font-size: 0.9rem;
+        max-width: 85%; /* Mais compacto em telas menores */
+    }
+
+    @media screen and (max-width: 570px) {
+        font-size: 0.75rem;
+    }
 `;
 
 export const SeeMoreProjects= styled(Link)`

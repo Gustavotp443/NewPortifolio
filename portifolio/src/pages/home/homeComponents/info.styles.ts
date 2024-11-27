@@ -95,19 +95,35 @@ export const Subtext = styled.div`
 export const ImgInfo = styled.div`
     width: 50%;
     text-align: center;
-    >img{
-        width:418.6px;
-        height:519.2px;
+
+    > img {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #000;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        transition: transform 0.3s ease;
     }
-    @media screen and (max-width:960px){
+
+    > img:hover {
+        transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    }
+
+    @media screen and (max-width: 960px) {
         width: 100%;
         margin-top: 80px;
+
+        > img {
+            width: 300px;
+            height: 300px;
+        }
     }
-    @media screen and (max-width:570px){
-        >img{
-            width:calc(418.6px /2);
-            height:calc(519.2px/2);
+
+    @media screen and (max-width: 570px) {
+        > img {
+            width: 200px;
+            height: 200px;
         }
     }
 `;
-
