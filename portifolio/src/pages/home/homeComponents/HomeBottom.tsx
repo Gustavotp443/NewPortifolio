@@ -9,7 +9,6 @@ import {
     SiGithub,
     SiGit,
     SiTypescript,
-    SiJava,
     SiCsharp,
     SiSpring,
     SiDotnet,
@@ -17,6 +16,7 @@ import {
     SiPostgresql,
     SiMysql,
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa6";
 
 const HomeBottom = () => {
     return (
@@ -60,7 +60,7 @@ const HomeBottom = () => {
                 <SiReact />
                 <SiGithub />
                 <SiGit />
-                <SiJava />
+                <FaJava />
                 <SiSpring />
                 <SiCsharp />
                 <SiDotnet />
