@@ -41,7 +41,7 @@ const Header = () => {
             <div>
             <div></div>
                <Link to="/blog">Blog</Link>
-            </div> */}
+            </div> p */}
                     </S.Menu>
                 </S.HeaderWrapper>
             </S.HeaderContainer>
