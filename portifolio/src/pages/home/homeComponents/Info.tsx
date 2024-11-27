@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from "./info.styles";
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { getYearsOld } from "../../../utils/getYearsOld";
 
 const InfoHome = () => {
     return (
@@ -16,11 +17,11 @@ const InfoHome = () => {
                 </div>
                 <S.Subtext>
                     <p>
-                        Olá, possuo 21 anos e desenvolvo aplicações web há 3
-                        anos, focado em desenvolver códigos eficientes,
-                        escaláveis e limpos. Meu objetivo é sempre entregar
-                        soluções eficientes que proporcionem a melhor
-                        experiência ao usuário, combinando performance,
+                        Olá, possuo {getYearsOld()} anos e desenvolvo aplicações
+                        web há {getYearsOld() - 18} anos, focado em desenvolver
+                        códigos eficientes, escaláveis e limpos. Meu objetivo é
+                        sempre entregar soluções eficientes que proporcionem a
+                        melhor experiência ao usuário, combinando performance,
                         acessibilidade e design intuitivo.
                     </p>
                     <span>

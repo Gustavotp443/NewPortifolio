@@ -3,14 +3,13 @@ import styled from "styled-components";
 import theme from "../../../themes/theme";
 
 
-export const ProjectsContainer= styled.section`
+export const ProjectsContainer= styled.div`
 
  padding: 60px 4%;
- padding-bottom: 60vh;
+ height: 800px;
  display: flex;
  color: ${theme.backgroundColors.Gray};
  flex-direction: column;
- justify-content: center;
  align-items: center;
  gap: 20px;
  animation:mymove 2.5s ease 0s 1;
@@ -34,8 +33,14 @@ export const ProjectsContainer= styled.section`
     font-size: 1.5rem;
  }
 
+ @media screen and (max-width: 768px){
+  height: 700px;
+
+    }
+
  @media screen and (max-width: 425px){
   padding-bottom: 30vh;
+  height: 500px;
   }
 
 `;
@@ -115,7 +120,9 @@ export const CardWrapper= styled.div`
 export const DescriptionWrapper = styled.div`
     display: flex;
     justify-content: center;
-    align-items: center;
+    height: 300px;
+    text-align: justify;
+    text-indent:3em;
 
     @media screen and (max-width: 570px) {
         font-size: 0.75rem;
@@ -124,19 +131,21 @@ export const DescriptionWrapper = styled.div`
 
 export const DescriptionText = styled.p`
     color: ${theme.backgroundColors.Gray};
-    font-size: 1rem;
+    font-size: 24px;
     text-align: center;
     line-height: 1.5;
-    max-width: 70%; /* Ajuste para limitar a largura da descrição */
+    max-width: 70%;
     word-wrap: break-word;
+    text-shadow: 0 0 15px ${theme.backgroundColors.LightBG};
 
     @media screen and (max-width: 860px) {
-        font-size: 0.9rem;
-        max-width: 85%; /* Mais compacto em telas menores */
+        font-size: 18px;
+        max-width: 85%;
     }
 
     @media screen and (max-width: 570px) {
-        font-size: 0.75rem;
+      font-size: 14px;
+      line-height: 26px;
     }
 `;
 

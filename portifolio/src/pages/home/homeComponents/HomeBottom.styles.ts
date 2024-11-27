@@ -50,11 +50,11 @@ text-indent:3em;
 `;
 
 export const TextTop = styled.div`
-font-size: 16px;
+font-size: 20px;
 color: ${theme.backgroundColors.Gray} ;
 text-shadow: 0 0 40px ${theme.backgroundColors.LightBG};
 @media screen and (max-width:580px){
-    font-size: 12px;
+    font-size: 14px;
     line-height: 26px;
 }
 
@@ -63,12 +63,12 @@ text-shadow: 0 0 40px ${theme.backgroundColors.LightBG};
 export const TextBot = styled.div`
 margin-top: 40px;
 text-shadow: 0 0 40px ${theme.backgroundColors.LightBG};
-font-size: 16px;
+font-size: 20px;
 color: ${theme.backgroundColors.Gray} ;
 
 @media screen and (max-width:580px){
     margin-top: 20px;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 26px;
 }
 `;
@@ -78,7 +78,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap: 20px;
-margin-top: 60px;
+margin-top: 80px;
+flex-wrap: wrap;
 
 svg{
     box-shadow: 0 0 40px #a286e1;
@@ -86,6 +87,8 @@ svg{
     font-size: 24px;
     background:rgba(162,134,225,0.2);
     backdrop-filter: blur(40px);
+    width: 30px;
+    height: 30px;
 
 }
     svg:hover{

@@ -1,24 +1,24 @@
 /* eslint-disable react/no-unescaped-entities */
+import { getYearsOld } from "../../../utils/getYearsOld";
 import * as S from "./HomeBottom.styles";
-import { SiHtml5, SiCss3, SiJavascript, SiReact, SiGithub, SiGit,SiTypescript } from "react-icons/si";
-import { useState, useEffect } from "react";
+import {
+    SiHtml5,
+    SiCss3,
+    SiJavascript,
+    SiReact,
+    SiGithub,
+    SiGit,
+    SiTypescript,
+    SiJava,
+    SiCsharp,
+    SiSpring,
+    SiDotnet,
+    SiPhp,
+    SiPostgresql,
+    SiMysql,
+} from "react-icons/si";
+
 const HomeBottom = () => {
-    const [yearsOld, setYearsOld] = useState();
-
-
-    const YearsOld = () => {
-        const year = new Date().getFullYear();
-        const month = new Date().getMonth();
-        const day = new Date().getDate();
-        let YO:any = year - 2003;
-        if ((month < 3 || month === 3) && day < 4) {
-            YO--;
-        }
-        setYearsOld(YO < 0 ? 0 : YO);
-    };
-    useEffect(() => {
-        YearsOld();
-    }, []);
     return (
         <S.AboutContainer>
             <S.AboutHeader>
@@ -27,21 +27,46 @@ const HomeBottom = () => {
             </S.AboutHeader>
             <S.AboutText>
                 <S.TextTop>
-                    <p> Me chamo Gustavo Teixeira Pardini, possuo atualmente {`${yearsOld}`} anos, nascido em Santo André-SP, sempre fui apaixonado na área de tecnologia,
-                        e após experimentar diversos ramos no meio e outras linguagens de programação, acabei me identificando com o Desenvolvimento Web, o que acabou se transformando em uma nova paixão
-                        e como objetivo me tornar cada dia melhor nessa área a qual resolvi seguir carreira. Observar como é a criação de um sistema desde o começo e o seu resultado final é muito satisfatório
-                        e me motiva a querer continuar.
+                    <p>
+                        {" "}
+                        Me chamo Gustavo Teixeira Pardini, possuo atualmente{" "}
+                        {`${getYearsOld()}`} anos, sou Desenvolvedor Web
+                        Fullstack , nascido em Santo André-SP,estou finalizando
+                        a graduação em Informática para Negócios na Faculdade de
+                        Tecnologia de São Bernardo do Campo. Apaixonado por
+                        tecnologia e inovação, possuo experiência como
+                        desenvolvedor e colaboro em projetos que demandam
+                        soluções criativas e eficientes. Estou sempre em busca
+                        de novos desafios para contribuir e crescer.
                     </p>
                 </S.TextTop>
                 <S.TextBot>
-                    <p>Atualmente sou Desenvolvedor Web Front End e estou cursando o 4º semestre de Informática para Negócios na Faculdade de Tecnologia de São Bernardo do Campo. Meu principal objetivo é me tornar um
-
-                        Desenvolvedor Full Stack. Atualmente desenvolvo minhas aplicações utilizando Javascript junto ao framework React JS, tenho conhecimentos sólidos em CSS, Styled-Components, desenvolvimento de interfaces, reponsividade, consumo de API's, Git, Github, entre outros.
+                    <p>
+                        Com prática em tecnologias como Node.js, React, Next,
+                        JavaScript,TypeScript e PHP, Java, C#, .NET e Spring,
+                        proporcionando uma base sólida para aprender e
+                        adaptar-me rapidamente a novas ferramentas e linguagens.
+                        Além disso, possuo conhecimentos sólidos em Orientação à
+                        Objetos , Clean Architeture e melhoria e qualidade de
+                        código.
                     </p>
                 </S.TextBot>
             </S.AboutText>
             <S.AboutIcons>
-                <SiHtml5 /><SiCss3 /><SiJavascript /><SiTypescript/><SiReact /><SiGithub /><SiGit />
+                <SiHtml5 />
+                <SiCss3 />
+                <SiJavascript />
+                <SiTypescript />
+                <SiReact />
+                <SiGithub />
+                <SiGit />
+                <SiJava />
+                <SiSpring />
+                <SiCsharp />
+                <SiDotnet />
+                <SiPhp />
+                <SiPostgresql />
+                <SiMysql />
             </S.AboutIcons>
         </S.AboutContainer>
     );

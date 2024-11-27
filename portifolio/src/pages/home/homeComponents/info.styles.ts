@@ -56,13 +56,13 @@ export const TextInfo = styled.div`
 `;
 
 export const Subtext = styled.div`
-        font-size: 16px;
+        font-size: 18px;
         flex-wrap: wrap;
         line-height: 36px;
         margin-top: 40px;
         color: ${theme.backgroundColors.Gray};
         @media screen and (max-width:570px){
-        font-size: 12px;
+        font-size: 14px;
         line-height: 30px;
         margin-top: 20px;
         }

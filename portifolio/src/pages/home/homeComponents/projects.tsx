@@ -7,33 +7,25 @@ type ClickedProps = {
     clientY: number;
 };
 
-const RecentProjects = () => {
-    const [mousePoints, setMousePoints] = React.useState<ClickedProps[]>([]);
-    const [index, setIndex] = React.useState(0);
+type Card = {
+    id: string;
+    image: string;
+    href: string;
+    description: string;
+};
 
-    const cards = [
-        {
-            id: "1",
-            image: "https://i.imgur.com/y6Vj0OB.png",
-            href: "https://sams-project-js.vercel.app",
-            description:
-                "Um sistema de gerenciamento de projetos eficiente e responsivo 1.",
-        }, //SAMS
-        {
-            id: "2",
-            image: "https://i.imgur.com/vEn02FG.png",
-            href: "https://gustavopokemonpokedex.vercel.app/",
-            description:
-                "Um sistema de gerenciamento de projetos eficiente e responsivo 2.",
-        },
-        {
-            id: "3",
-            image: "https://i.imgur.com/I0Z1hQv.png",
-            href: "https://github.com/Gustavotp443/PROJETO-TAREFAS",
-            description:
-                "Um sistema de gerenciamento de projetos eficiente e responsivo 3.",
-        }, //PROJECT TASKS
-    ];
+type RecentProjectsProps = {
+    index: number;
+    setIndex: React.Dispatch<React.SetStateAction<number>>;
+    cards: Card[];
+};
+
+const RecentProjects: React.FC<RecentProjectsProps> = ({
+    index,
+    setIndex,
+    cards,
+}) => {
+    const [mousePoints, setMousePoints] = React.useState<ClickedProps[]>([]);
 
     const mod = (n: any, m: any) => {
         const result = n % m;
@@ -52,7 +44,7 @@ const RecentProjects = () => {
     React.useEffect(() => {
         setTimeout(() => {
             setIndex((index + 1) % cards.length);
-        }, 6000);
+        }, 8000);
     }, [index]);
 
     return (
@@ -101,15 +93,6 @@ const RecentProjects = () => {
                     </S.CardWrapper>
                 </div>
             </S.ProjectsContainer>
-            <div>
-                <S.DescriptionWrapper>
-                    <S.DescriptionText>
-                        {cards[index]?.description ||
-                            "Descrição não disponível"}
-                    </S.DescriptionText>
-                </S.DescriptionWrapper>
-            </div>
-
             {/* <S.ButtonContainer>
                 <S.SeeMoreProjects to="/projects">
                     Ver Mais Projetos
